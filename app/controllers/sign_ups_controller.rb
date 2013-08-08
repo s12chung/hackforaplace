@@ -4,5 +4,6 @@ class SignUpsController < ApplicationController
   end
 
   def create
+    @sign_up = SignUp.create(params[:sign_up])
   end
 end

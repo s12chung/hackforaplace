@@ -1,6 +1,18 @@
-$('#modal').modal('hide');
+(function() {
+    function show_message_modal(title, body) {
+        var $message_modal = $('#message_modal');
+        $message_modal.find('.modal-title').html(title);
+        $message_modal.find('.modal-body').html(body);
+        $message_modal.modal('show');
+    }
 
-var $message_modal = $('#message_modal');
-$message_modal.find('.modal-title').html('Thanks for signing up!');
-$message_modal.find('.modal-body').html('An email has been sent to "" confirm the sign up.');
-$message_modal.modal('show');
+    $('#modal').modal('hide');
+
+    <% if @sign_up.valid? %>
+    show_message_modal('Thanks for signing up!',
+            'An email has been sent to "" confirm the sign up.');
+    <% else %>
+    show_message_modal('Error',
+            '<%= @sign_up.errors.full_messages.first %>');
+    <% end %>
+})();
