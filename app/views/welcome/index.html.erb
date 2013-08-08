@@ -1,81 +1,107 @@
 <div class="carousel">
   <div class="carousel-inner">
     <div class="item active">
-      <img data-src="holder.js/1500x500/auto/#777:#7a7a7a/text:First slide" alt="">
+      <img data-src="holder.js/1500x500/auto/#777:#7a7a7a/text:Picture of Toronto" alt="">
       <div class="carousel-caption container">
         <h1>Hack for a Place</h1>
-        <p>Everyone has a favourite place, but not every place has a website. Let's build one.</p>
-        <p><a class="btn btn-large btn-primary" href="#">Sign up today</a></p>
+        <p>Everyone has a favourite place, but not every place has a website.</p>
+        <p><a class="btn btn-large btn-primary" href="#">Let's build one</a></p>
       </div>
     </div>
   </div>
 </div>
 
-
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
 <div class="container marketing">
-
-  <!-- Three columns of text below the carousel -->
   <div class="row">
-    <div class="col-lg-4">
-      <img class="img-circle" data-src="holder.js/140x140">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img class="img-circle" data-src="holder.js/140x140">
-      <h2>Heading</h2>
-      <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img class="img-circle" data-src="holder.js/140x140">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
-    </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <div class="row points">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <h2>The Plan</h2>
+          <% [
+                     "Sign up!",
+                     "We help you form a team and match your team with a place.",
+                     "All teams will build a website for your favourite place in a day."
+             ].each do |step| %>
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object img-circle" src="holder.js/72x72">
+                </a>
+                <div class="media-body lead">
+                  <div><%= step %></div>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
 
 
-  <!-- START THE FEATURETTES -->
+      <div class="details">
+        <h2>Details</h2>
+        <%
+            [
+                    {
+                            q: "Why",
+                            a: "Let's celebrate our favourite places by building them a website."
+                    },
+                    {
+                            q: "Where",
+                            a: "Stone Soup Innovation Lab - 47a Fraser Ave, Toronto M6K 1Y7"
+                    },
+                    {
+                            q: "When",
+                            a: "To be decided. On a Saturday in the following months."
+                    }
+            ].each do |q_a|
+        %>
+            <div class="row">
+              <div class="col-lg-2">
+                <h3><%= q_a[:q] %></h3>
+              </div>
+              <div class="col-lg-10 answer lead">
+                <%= q_a[:a] %>
+              </div>
+            </div>
+            <% end %>
 
-  <hr class="featurette-divider">
+      </div>
+      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.google.ca/maps?sll=43.6568775,-79.32085&amp;sspn=0.763349351799743,1.407190298341395&amp;t=m&amp;q=47+Fraser+Ave,+Toronto,+ON+M6K+1Y7&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=47+Fraser+Ave,+Toronto,+Toronto+Division,+Ontario+M6K+1Y7&amp;z=14&amp;ll=43.637286,-79.423855&amp;output=embed"></iframe>
 
-  <div class="featurette">
-    <img class="featurette-image img-circle pull-right" data-src="holder.js/512x512">
-    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+      <h2>About Us</h2>
+      <% [
+                 {
+                         role: "Organizer",
+                         name: "Placemark",
+                         description: "Placemark is about saving your favourite places as easily as possible."
+                 },
+                 {
+                         role: "Host",
+                         name: "Stone Soup",
+                         description: "We help businesses succeed."
+                 }
+         ].each do |company| %>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="holder.js/72x72">
+            </a>
+            <div class="media-body">
+              <div>
+                <h4><%= company[:name] %> <small class="text-muted"><%= company[:role] %></small></h4>
+                <p><%= company[:description] %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
   </div>
 
-  <hr class="featurette-divider">
-
-  <div class="featurette">
-    <img class="featurette-image img-circle pull-left" data-src="holder.js/512x512">
-    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  <div class="end">
+    <small><a href="#">Back to top</a></small>
   </div>
 
-  <hr class="featurette-divider">
-
-  <div class="featurette">
-    <img class="featurette-image img-circle pull-right" data-src="holder.js/512x512">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <!-- /END THE FEATURETTES -->
-
-
-  <!-- FOOTER -->
-  <footer>
+  <footer class="clearfix">
     <small class="pull-right">Website by <%= link_to "Placemark", "http://www.placemarkhq.com", target: "_blank" %></small>
   </footer>
-
-</div><!-- /.container -->
+</div>
