@@ -28,4 +28,8 @@ HackForAPlace::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # For ActionMailer emails
+  config.action_mailer.default_url_options = { host: "localhost", port: "3000" }
+  config.action_mailer.delivery_method = :letter_opener
 end

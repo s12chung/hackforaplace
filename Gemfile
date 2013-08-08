@@ -21,6 +21,10 @@ group :assets do
   gem 'patterns'
 end
 
+group :development do
+  gem 'letter_opener' # Email previews
+end
+
 gem 'jquery-rails'
 
 gem 'mongoid'
