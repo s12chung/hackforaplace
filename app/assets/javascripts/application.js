@@ -12,3 +12,7 @@
 //
 //= require jquery_ujs
 //= require_tree .
+
+function data_behavior(behavior) {
+    return '[data-behavior~="' + behavior + '"]';
+}
