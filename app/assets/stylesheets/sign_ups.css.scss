@@ -1,6 +1,7 @@
 @import 'patterns';
 
 body {
+  font-family: "proxima-nova", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   padding-bottom: 40px;
 
   .carousel {
@@ -39,9 +40,16 @@ body {
 
     .points {
       .media {
+        h3 {
+          font-size: 60px;
+          margin: 0;
+          padding: 0;
+          margin-top: 10px;
+        }
         .media-body {
           @include center_container_vertical;
-          height: 72px;
+          height: 87px;
+          margin: 0;
         }
       }
     }
@@ -55,7 +63,7 @@ body {
 
       .answer {
         position: relative;
-        bottom: 5px;
+        bottom: 1px;
       }
     }
   }

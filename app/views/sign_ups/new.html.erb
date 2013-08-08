@@ -25,12 +25,12 @@
                      "Sign up!",
                      "We help you form a team and match your team with a place.",
                      "All teams will build a website for your favourite place together in one day."
-             ].each do |step| %>
-              <div class="media">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-circle" data-src="holder.js/72x72">
-                </a>
-                <div class="media-body lead">
+             ].each_with_index do |step, index| %>
+              <div class="media row">
+                <h3 class="col-lg-3 text-muted">
+                    <%= index + 1 %>
+                </h3>
+                <div class="col-lg-89 media-body lead">
                   <div><%= step %></div>
                 </div>
               </div>
@@ -49,7 +49,7 @@
                     },
                     {
                             q: "Where",
-                            a: "Stone Soup Innovation Lab - 47a Fraser Ave, Toronto M6K 1Y7"
+                            a: "Stone Soup Innovation Lab &mdash; 47a Fraser Ave, Toronto M6K 1Y7"
                     },
                     {
                             q: "When",
@@ -58,11 +58,11 @@
             ].each do |q_a|
         %>
             <div class="row">
-              <div class="col-lg-2">
+              <div class="col-lg-3">
                 <h3><%= q_a[:q] %></h3>
               </div>
-              <div class="col-lg-10 answer lead">
-                <%= q_a[:a] %>
+              <div class="col-lg-9 answer lead">
+                <%= q_a[:a].html_safe %>
               </div>
             </div>
             <% end %>
