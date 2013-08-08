@@ -11,6 +11,12 @@ body {
 
   .carousel {
     margin-bottom: 60px;
+
+    .carousel-caption {
+      left: 0;
+      right: 0;
+      text-align: left;
+    }
   }
 }
 
