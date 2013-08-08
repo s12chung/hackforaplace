@@ -21,8 +21,14 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
         <a class="navbar-brand" href="#top" data-behavior="scroll_to">Hack for a Place</a>
-        <div class="nav-collapse collapse">
+        <div class="nav-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <% ["The Plan", "Details", "About Us"].each do |section| %>
                 <li><a href="#<%= section.underscore.gsub(/\s/, "_") %>" data-behavior="scroll_to"><%= section %></a></li>
