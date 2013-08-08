@@ -48,7 +48,9 @@ HackForAPlace::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'sign_up#new'
+
+  resources :sign_ups, only: %i[new create]
+  root :to => 'sign_ups#new'
 
   # See how all your routes lay out with "rake routes"
 
