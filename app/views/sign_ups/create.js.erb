@@ -7,12 +7,16 @@
     }
 
     $('#modal').modal('hide');
+    var $sign_up_email = $('.form-group');
+    $sign_up_email.removeClass('has-error');
 
     <% if @sign_up.valid? %>
     show_message_modal('Thanks for signing up!',
-            'An email has been sent to "" confirm the sign up.');
+            'An email has been sent to "<%= @sign_up.email %>" confirm the sign up.');
+    $('#sign_up_email').val('');
     <% else %>
     show_message_modal('Error',
             '<%= @sign_up.errors.full_messages.first %>');
+    $sign_up_email.addClass('has-error');
     <% end %>
 })();
