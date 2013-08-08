@@ -80,9 +80,36 @@ body {
 
 @media (max-width: 768px) {
   body {
-    .marketing {
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    .container {
       padding-left: 15px;
       padding-right: 15px;
+    }
+    .btn-large {
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .carousel {
+      .carousel-caption {
+        p {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .back_to_top {
+      font-size: 24px;
     }
   }
 }
