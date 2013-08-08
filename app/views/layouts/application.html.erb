@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Hack for a Place - Build a website for your favourite place</title>
+  <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0, user-scalable=no" %>
   <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc1/css/bootstrap.min.css" %>
   <%= stylesheet_link_tag "application", :media => "all" %>
 
@@ -16,19 +17,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="85">
-<div class="navbar-wrapper">
+<div class="navbar-wrapper hidden-sm">
   <div class="container">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
         <a class="navbar-brand" href="#top" data-behavior="scroll_to">Hack for a Place</a>
-        <div class="nav-collapse collapse navbar-responsive-collapse">
+        <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
             <% ["The Plan", "Details", "About Us"].each do |section| %>
                 <li><a href="#<%= section.underscore.gsub(/\s/, "_") %>" data-behavior="scroll_to"><%= section %></a></li>

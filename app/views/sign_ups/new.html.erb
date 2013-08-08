@@ -27,12 +27,12 @@
                      "All teams will build a website for your favourite place together in one day."
              ].each_with_index do |step, index| %>
               <div class="media row">
-                <div class="col-lg-3 col-2">
+                <div class="col-lg-3 col-3">
                   <h3 class="text-muted">
                     <%= index + 1 %>
                   </h3>
                 </div>
-                <div class="col-lg-9 col-10 media-body lead">
+                <div class="col-lg-9 col-9 media-body lead">
                   <div><%= step %></div>
                 </div>
               </div>
@@ -70,7 +70,7 @@
             <% end %>
 
       </div>
-      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+      <iframe id="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="http://www.google.ca/maps?sll=43.6568775,-79.32085&amp;sspn=0.763349351799743,1.407190298341395&amp;t=m&amp;q=47+Fraser+Ave,+Toronto,+ON+M6K+1Y7&amp;dg=opt&amp;ie=UTF8&amp;hq=&amp;hnear=47+Fraser+Ave,+Toronto,+Toronto+Division,+Ontario+M6K+1Y7&amp;z=14&amp;ll=43.637286,-79.423855&amp;output=embed"></iframe>
 
       <h2 id="about_us">About Us</h2>
@@ -102,7 +102,7 @@
   </div>
 
   <div class="end">
-    <small><a href="#top" data-behavior="scroll_to" class="back_to_top">Back to top</a></small>
+    <a href="#top" data-behavior="scroll_to" class="btn btn-primary">Sign Up!</a>
   </div>
 
   <footer class="clearfix">
