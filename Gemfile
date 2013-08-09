@@ -22,6 +22,11 @@ group :assets do
   gem 'patterns'
 end
 
+group :production do
+  # Pings heroku for speed up and checks speed
+  gem 'newrelic_rpm'
+end
+
 group :development do
   gem 'letter_opener' # Email previews
 end

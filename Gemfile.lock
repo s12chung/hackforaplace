@@ -63,6 +63,7 @@ GEM
       tzinfo (~> 0.3.22)
     moped (1.5.0)
     multi_json (1.7.8)
+    newrelic_rpm (3.6.5.130)
     origin (1.1.0)
     patterns (0.1.6)
       sass (>= 3.2)
@@ -120,6 +121,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   mongoid
+  newrelic_rpm
   patterns
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
