@@ -29,7 +29,7 @@
         <a class="navbar-brand" href="#top" data-behavior="scroll_to">Hack for a Place</a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <% ["The Plan", "Details", "About Us"].each do |section| %>
+            <% ["Intro", "The Plan", "Details", "About Us"].each do |section| %>
                 <li><a href="#<%= section.underscore.gsub(/\s/, "_") %>" data-behavior="scroll_to"><%= section %></a></li>
             <% end %>
           </ul>

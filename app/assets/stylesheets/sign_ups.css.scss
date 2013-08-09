@@ -33,6 +33,12 @@ body {
     }
   }
 
+  section[role="intro"] {
+    p {
+      margin: 0 0 20px;
+    }
+  }
+
   section[role="the_plan"] {
     .media {
       h3 {
