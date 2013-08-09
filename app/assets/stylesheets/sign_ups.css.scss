@@ -4,6 +4,12 @@ body {
   font-family: "proxima-nova", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
   padding-bottom: 40px;
 
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
   .carousel {
     margin-bottom: 30px;
 
@@ -23,48 +29,32 @@ body {
     }
   }
 
-  .marketing {
-    h2 {
-      margin-top: 50px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    h4{
-      margin-bottom: 5px;
-
-      .text-muted {
-        font-weight: normal;
-      }
-    }
-
-    .points {
-      .media {
-        h3 {
-          font-size: 60px;
-          margin: 0;
-          padding: 0;
-          margin-top: 10px;
-        }
-        .media-body {
-          @include center_container_vertical;
-          height: 87px;
-          margin: 0;
-        }
-      }
-    }
-
-    .details {
-      margin-bottom: 20px;
-
+  section[role="the_plan"] {
+    .media {
       h3 {
-        margin-top: 0;
+        font-size: 60px;
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
       }
+      .media-body {
+        @include center_container_vertical;
+        height: 87px;
+        margin: 0;
+      }
+    }
+  }
 
-      .answer {
-        position: relative;
-        bottom: 1px;
-      }
+  section[role="details"] {
+    margin-bottom: 20px;
+
+    h3 {
+      margin-top: 0;
+    }
+
+    .answer {
+      position: relative;
+      bottom: 1px;
     }
 
     .map {
@@ -73,8 +63,20 @@ body {
     }
   }
 
-  .media-object {
-    width: 72px;
+  section[role="about_us"] {
+    .media {
+      h4{
+        margin-top: 0;
+        margin-bottom: 5px;
+
+        .text-muted {
+          font-weight: normal;
+        }
+      }
+      .media-object {
+        width: 72px;
+      }
+    }
   }
 
   .end {
@@ -123,7 +125,7 @@ body {
       }
     }
 
-    .marketing {
+    section[role="details"] {
       .map {
         height: 200px;
       }

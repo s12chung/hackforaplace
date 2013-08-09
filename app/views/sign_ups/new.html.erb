@@ -13,35 +13,38 @@
   </div>
 </div>
 
-<div class="container marketing">
+<div class="container">
   <div class="row">
     <div class="col-lg-3"></div>
     <div class="col-lg-6">
-      <div class="row points">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-          <h2 id="the_plan">The Plan</h2>
-          <% [
-                     "Sign up!",
-                     "We help you form a team and match your team with a place.",
-                     "All teams will build a website for your favourite place together in one day."
-             ].each_with_index do |step, index| %>
-              <div class="media row">
-                <div class="col-lg-3 col-3">
-                  <h3 class="text-muted">
-                    <%= index + 1 %>
-                  </h3>
+
+      <section role="the_plan">
+        <div class="row">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8">
+            <h2 id="the_plan">The Plan</h2>
+            <% [
+                       "Sign up!",
+                       "We help you form a team and match your team with a place.",
+                       "All teams will build a website for your favourite place together in one day."
+               ].each_with_index do |step, index| %>
+                <div class="media row">
+                  <div class="col-lg-3 col-3">
+                    <h3 class="text-muted">
+                      <%= index + 1 %>
+                    </h3>
+                  </div>
+                  <div class="col-lg-9 col-9 media-body lead">
+                    <div><%= step %></div>
+                  </div>
                 </div>
-                <div class="col-lg-9 col-9 media-body lead">
-                  <div><%= step %></div>
-                </div>
-              </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
-      </div>
+      </section>
 
 
-      <div class="details">
+      <section role="details">
         <h2 id="details">Details</h2>
         <%
            [
@@ -69,35 +72,36 @@
             </div>
         <% end %>
 
-      </div>
+        <div data-behavior="map" class="map"></div>
+      </section>
 
-      <div data-behavior="map" class="map"></div>
-
-      <h2 id="about_us">About Us</h2>
-      <% [
-                 {
-                         role: "Organizer",
-                         name: "Placemark",
-                         description: "Placemark is about saving your favourite places as easily as possible."
-                 },
-                 {
-                         role: "Host",
-                         name: "Stone Soup",
-                         description: "We help businesses succeed."
-                 }
-         ].each do |company| %>
-          <div class="media">
-            <a class="pull-left" href="#">
-              <%= image_tag "icon_#{company[:name].underscore.gsub(/\s/, "_")}.png", class: "media-object" %>
-            </a>
-            <div class="media-body">
-              <div>
-                <h4><%= company[:name] %> <small class="text-muted"><%= company[:role] %></small></h4>
-                <p><%= company[:description] %></p>
+      <section role="about_us">
+        <h2 id="about_us">About Us</h2>
+        <% [
+                   {
+                           role: "Organizer",
+                           name: "Placemark",
+                           description: "Placemark is about saving your favourite places as easily as possible."
+                   },
+                   {
+                           role: "Host",
+                           name: "Stone Soup",
+                           description: "We help businesses succeed."
+                   }
+           ].each do |company| %>
+            <div class="media">
+              <a class="pull-left" href="#">
+                <%= image_tag "icon_#{company[:name].underscore.gsub(/\s/, "_")}.png", class: "media-object" %>
+              </a>
+              <div class="media-body">
+                <div>
+                  <h4><%= company[:name] %> <small class="text-muted"><%= company[:role] %></small></h4>
+                  <p><%= company[:description] %></p>
+                </div>
               </div>
             </div>
-          </div>
-      <% end %>
+        <% end %>
+      </section>
     </div>
   </div>
 
