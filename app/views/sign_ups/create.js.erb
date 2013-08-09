@@ -9,6 +9,7 @@
     $('#modal').modal('hide');
     var $sign_up_email = $('.form-group');
     $sign_up_email.removeClass('has-error');
+    Behavior.button.reset_all();
 
     <% if @sign_up.valid? %>
     show_message_modal('Thanks for signing up!',
