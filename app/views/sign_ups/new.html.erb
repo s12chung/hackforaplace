@@ -99,18 +99,20 @@
                    {
                            role: "Organizer",
                            name: "Placemark",
+                           url: "http://www.placemarkhq.com",
                            description: "Placemark is about saving your favourite places as easily as possible."
                    },
                    {
                            role: "Host",
                            name: "Stone Soup",
+                           url: "http://www.stonesouphq.com",
                            description: "We help businesses succeed."
                    }
            ].each do |company| %>
             <div class="media">
-              <a class="pull-left" href="#">
-                <%= image_tag "icon_#{company[:name].underscore.gsub(/\s/, "_")}.png", class: "media-object" %>
-              </a>
+              <%= link_to company[:url], class: "pull-left", target: "_blank" do %>
+                  <%= image_tag "icon_#{company[:name].underscore.gsub(/\s/, "_")}.png", class: "media-object" %>
+              <% end %>
               <div class="media-body">
                 <div>
                   <h4><%= company[:name] %> <small class="text-muted"><%= company[:role] %></small></h4>
