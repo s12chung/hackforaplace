@@ -125,6 +125,16 @@ body {
       }
     }
 
+    section[role="the_plan"] {
+      h2 {
+        margin-bottom: 10px;
+      }
+      .media {
+        margin-top: 0;
+        height: 80px;
+      }
+    }
+
     section[role="details"] {
       .map {
         height: 200px;
