@@ -88,7 +88,7 @@
          ].each do |company| %>
           <div class="media">
             <a class="pull-left" href="#">
-              <img class="media-object" data-src="holder.js/72x72">
+              <%= image_tag "icon_#{company[:name].underscore.gsub(/\s/, "_")}.png", class: "media-object" %>
             </a>
             <div class="media-body">
               <div>
