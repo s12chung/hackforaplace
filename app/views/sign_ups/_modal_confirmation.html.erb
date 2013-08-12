@@ -8,8 +8,8 @@
   </div>
 
   <% %i[facebook twitter].each do |network| %>
-      <%= link_to share_url(network, url: request.original_url) do %>
-          <%= image_tag "#{network}_logo.png", class: "share" %>
+      <%= link_to share_url(network, url: root_url) do %>
+          <%= image_tag "#{network}_logo.png", target: "_blank", class: "share" %>
       <% end %>
   <% end %>
 </section>
