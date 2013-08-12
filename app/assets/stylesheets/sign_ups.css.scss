@@ -98,6 +98,17 @@ body {
   footer {
     margin-top: 20px;
   }
+
+  #message_modal {
+    section[role="share"] {
+      margin-top: 20px;
+      text-align: center;
+
+      .share {
+        width: 50px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {

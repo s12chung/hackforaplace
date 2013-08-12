@@ -1,0 +1,15 @@
+<div>
+  An email has been sent to "<%= @sign_up.email %>" for confirmation.
+</div>
+
+<section role="share" class="lead">
+  <div>
+    Tell your friends to join along too.
+  </div>
+
+  <% %i[facebook twitter].each do |network| %>
+      <%= link_to share_url(network, url: request.original_url) do %>
+          <%= image_tag "#{network}_logo.png", class: "share" %>
+      <% end %>
+  <% end %>
+</section>

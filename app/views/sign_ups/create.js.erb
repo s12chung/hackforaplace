@@ -13,7 +13,7 @@
 
     <% if @sign_up.valid? %>
     show_message_modal('Thanks for signing up!',
-            'An email has been sent to "<%= @sign_up.email %>" for confirmation.');
+            '<%= j render("modal_confirmation")%>');
     $('#sign_up_email').val('');
     <% else %>
     show_message_modal('Error',
