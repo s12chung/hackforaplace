@@ -8,7 +8,7 @@
   </div>
 
   <% %i[facebook twitter].each do |network| %>
-      <%= link_to share_url(network, url: root_url), target: "_blank" do %>
+      <%= link_to share_url(network, url: root_url, text: "Hack for a Place - Build a website for your favourite place"), target: "_blank" do %>
           <%= image_tag "#{network}_logo.png", class: "share" %>
       <% end %>
   <% end %>

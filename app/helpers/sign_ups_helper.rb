@@ -7,6 +7,7 @@ module SignUpsHelper
     "https://www.facebook.com/sharer/sharer.php?#{query}"
     else
       query = {
+          text: options[:text],
           url: options[:url]
       }.to_query
       "https://twitter.com/share?#{query}"
